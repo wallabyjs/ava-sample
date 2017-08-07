@@ -1,5 +1,5 @@
 export default class {
   hello() {
-    return 'hello';
+    throw new Error('Error');
   }
 }
