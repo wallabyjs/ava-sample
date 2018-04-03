@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/wallabyjs/ava-sample#readme",
   "devDependencies": {
-    "ava": "1.0.0-beta.3",
-    "chai": "^3.5.0"
+    "ava": "1.0.0-beta.3"
   }
 }
