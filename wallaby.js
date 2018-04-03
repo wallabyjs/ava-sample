@@ -4,26 +4,21 @@ module.exports = function (wallaby) {
       'app/**/*.js',
       '!app/**/*.spec.js'
     ],
-
     tests: [
       'app/**/*.spec.js'
     ],
-
     env: {
       type: 'node',
       runner: 'node'
     },
-
     compilers: {
-      '**/*.js': wallaby.compilers.babel()
+      '**/*.js': wallaby.compilers.babel({
+        // Tell Wallaby to use Ava's Babel preset, necessary if your project doesn't use Babel otherwise.
+        presets: ['@ava/babel-preset-stage-4']
+      })
     },
-
+    workers: {restart: true},
     testFramework: 'ava',
-
-    setup: function () {
-      require('babel-polyfill');
-    },
-
     debug: true
   };
 };
