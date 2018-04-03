@@ -17,7 +17,6 @@ module.exports = function (wallaby) {
         presets: ['@ava/babel-preset-stage-4']
       })
     },
-    workers: {restart: true},
     testFramework: 'ava',
     debug: true
   };
