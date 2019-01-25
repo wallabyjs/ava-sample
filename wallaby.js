@@ -2,6 +2,7 @@ module.exports = function (wallaby) {
   return {
     files: [
       'app/**/*.js',
+      'app/**/*.css',
       '!app/**/*.spec.js'
     ],
     tests: [
@@ -18,6 +19,9 @@ module.exports = function (wallaby) {
       })
     },
     testFramework: 'ava',
+    setup: () => {
+      require.extensions['.css'] = () => {};
+    },
     debug: true
   };
 };
